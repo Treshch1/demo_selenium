@@ -8,7 +8,7 @@ class HomePageObject(BasePage):
     URL = 'home'
 
     search_input = TextInput(input_field=Element('[name="q"]'))
-    clear_input_button = Element('span[aria-label="Clear"]')
+    clear_input_button = Element('[role="button"]>span>svg')
     suggestion_list = Element('[role="listbox"]')
 
     def submit_first_from_suggestions(self):
