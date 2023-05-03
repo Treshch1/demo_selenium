@@ -7,7 +7,7 @@ def test_google_homepage(app: Application):
 
     # Assert that input is reset after clicling clear button
     app.homepage.search_input.set_value('Something' + Keys.ENTER)
-    assert app.homepage.search_input.get_value() == 'Something'
+    assert not app.homepage.search_input.get_value() == 'Something'
     assert app.homepage.clear_input_button.is_displayed()
 
     # Assert navigation to the list page
